@@ -1,0 +1,100 @@
+//cd Desktop
+//cd personal_project
+//cd flashcard
+//cd css
+//sass style.scss:style.css
+
+$px_default: 10px;
+$button_grey : #999;
+$head_font: 'Major Mono Display', monospace;
+$text_light: #fff;
+$sarmon_color: #ff5232;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #e2e2e2;
+}
+
+h1{
+  margin: 15px 0;
+  color:$text_light;
+  font-family: $head_font;
+  font-size:2em;
+  text-align: center;
+  background-color: $sarmon_color;
+  padding: $px_default 0;
+  width: 100%;
+//  box-shadow:0 0 9px rgba(0,0,0,.2);
+}
+#category{
+  display: block;
+//  font-family: $head_font;
+  margin: auto;
+  font-size:1em;
+  background-color: $button_grey;
+  border:none;
+  border-bottom:3px solid #555;
+  padding: $px_default 30px;
+  border-radius:$px_default;
+  color:$text_light;
+}
+.start_text{
+  text-align: center;
+  color: #888;
+  font-size:1em;
+  margin-bottom: 13px;
+  font-weight: bold;
+}
+#input_area{
+  width:80%;
+  background-color: $text_light;
+  margin: 1% auto;
+  padding: 2%;
+  position: relative;
+}
+#input_area :after{
+  content:"";
+  display: block;
+  border: 20px solid transparent;
+  border-left: 20px solid $sarmon_color;
+  position: absolute;
+  top:-5%;
+  right:-2%;
+  transform:rotate(-45deg);
+}
+#input_area>*{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#question{
+  height:50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  color:$sarmon_color;
+}
+input{
+  border:1px solid #aaa;
+  border-radius:$px_default;
+  padding:$px_default 0;
+  text-align: center;
+}
+#button_submit{
+  border:none;
+  padding: $px_default;
+  border-radius:$px_default;
+  border-bottom:3px solid #555;
+  color:$text_light;
+  background-color:$button_grey;
+}
+#answer{
+  border-left:1px solid #aaa;
+  content:"";
+  padding:$px_default;
+  min-height:30px;
+}
