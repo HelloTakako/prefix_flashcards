@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   background-color: #e2e2e2; }
 
@@ -9,32 +12,29 @@ h1 {
   margin: 15px 0;
   color: #fff;
   font-family: "Major Mono Display", monospace;
-  font-size: 2em;
+  font-size: 3.5rem;
   text-align: center;
   background-color: #ff5232;
   padding: 10px 0;
-  width: 100%;
-}
+  width: 100%; }
 
 #category {
   display: block;
   margin: auto;
-  font-size: 1em;
+  font-size: 1rem;
   background-color: #999;
   border: none;
   border-bottom: 3px solid #555;
   padding: 10px 30px;
   border-radius: 10px;
-  color: #fff;
-}
+  color: #fff; }
 
 .start_text {
   text-align: center;
   color: #888;
-  font-size: 1em;
+  font-size: 2rem;
   margin-bottom: 13px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 #input_area {
   width: 80%;
@@ -42,7 +42,8 @@ h1 {
   margin: 1% auto;
   padding: 2%;
   position: relative;
-}
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; }
 
 #input_area :after {
   content: "";
@@ -52,43 +53,39 @@ h1 {
   position: absolute;
   top: -5%;
   right: -2%;
-  transform: rotate(-45deg);
-}
+  transform: rotate(-45deg); }
 
 #input_area > * {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 #question {
   height: 50px;
   text-align: center;
   font-weight: bold;
-  font-size: 1.8em;
-  letter-spacing: 1px;
-  color: #ff5232;
-}
+  font-size: 3rem;
+  color: #ff5232; }
 
 input {
   border: 1px solid #aaa;
   border-radius: 10px;
   padding: 10px 0;
-  text-align: center;
-}
+  text-align: center; }
 
 #button_submit {
   border: none;
+  font-size: 1.8rem;
   padding: 10px;
   border-radius: 10px;
   border-bottom: 3px solid #555;
   color: #fff;
-  background-color: #999;
-}
+  background-color: #999; }
 
 #answer {
   border-left: 1px solid #aaa;
   content: "";
   padding: 10px;
-  min-height: 30px;
-}
+  min-height: 30px; }
+
+/*# sourceMappingURL=style.css.map */
