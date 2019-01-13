@@ -1,7 +1,3 @@
-// question object
-var arr_question={
-  'a-':'not', 'acro-':'high', 'allo-':'other', 'alter-':'at least secondary', 'an-':'additional', 'ante-':'prior', 'anti-':'opposite', 'auto-':'by oneself or itself', 'bi-':'two', 'co-':'together', 'contra-':'below, against', 'counter-':'against', 'de-':'negative, remove', 'di-':'two', 'dis-':'negative, remove', 'down-':'down, reduce', 'dys-':'negative, badly, wrongly', 'epi-':'upon addition, above', 'extra-':'to a greater extent, beyond', 'fore-':'before', 'hemi-':'half', 'hexa-':'six', 'hyper-':'beyond', 'hypo-':'marginal,not enough', 'ig-':'not', 'a-':'not', 'a-':'not', 'a-':'not', 'il-':'within, toward, marginal or not', 'im-':'within, toward, marginal or not', 'in-':'within, toward, marginal or not', 'infra-':'below', 'inter-':'between', 'intra-':'within', 'ir-':'within,toward,marginal or not', 'macro-':'large-scale,exceptionally prominent', 'mal-':'unpleasant,not', 'maxi-':'big,as big as possible', 'meso-':'middle', 'meta-':'self-referential', 'micro-':'small-scale', 'mid-':'middle', 'mini-':'small', 'mis-':'bad,wrong', 'mono-':'one', 'multi-':'many,more than one', 'non-':'no,not', 'octo-':'eight', 'over-':'excess,too much,on top', 'pan-':'all', 'para-':'beside,beyond,related to,altered', 'penta-':'five', 'per-':'through,throughout', 'peri-':'around', 'poly-':'many', 'post-':'after', 'pre-':'before,already', 'pro-':'on behalf of,before', 'proto-':'first,primitive,precursor', 'pseudo-':'false,specious', 'quadri-':'four', 'quasi-':'somewhat,resembling', 're-':'again', 'self-':'[acting on or by] oneself', 'semi-':'partial,somewhat,half', 'sub-':'below', 'super-':'above,more than,great', 'supra-':'above', 'tetra-':'four', 'trans-':'across,connecting', 'tri-':'three', 'ultra-':'beyond,extremely', 'un-':'not,remove,opposite', 'under-':'beneath,not enough', 'up-':'up,increase', 'xeno-':'foreign'
-};
 // length of 'arr_question' object
 var arr_length = Object.keys(arr_question).length;
 
@@ -31,7 +27,7 @@ $(window).keydown(function startCards(e){
          console.log(question_key);
        };
 });
-/* wanna add function to count other cards left and also make same prefix won't appear more than once.*/
+/* add function to count other cards left and also make same prefix won't appear more than once.*/
 
 
 // submit and compare the answer function
