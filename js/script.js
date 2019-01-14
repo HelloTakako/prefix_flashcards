@@ -1,3 +1,13 @@
+// read suffix.json
+// jQueryでjsonデータを扱ってみる【入門編】
+$(document).ready(function(){
+  $.getJSON("js/suffix.json", function(data){
+    for(var i in data){
+      $('#question').innerHTML = i;
+    }
+  });
+});
+
 // length of 'arr_question' object
 var arr_length = Object.keys(arr_question).length;
 
