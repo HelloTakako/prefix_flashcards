@@ -1,62 +1,78 @@
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
-$(document).ready(function(){
-  $.getJSON("js/suffix.json", function(data){
-    for(var i in data){
-      $('#question').innerHTML = i;
-    }
-  });
-});
+// $(document).ready(function(){
+//   $.getJSON("js/suffix.json", function(data){
+//     for(var i in data){
+//       $('#question').innerHTML = i;
+//     }
+//   });
+// });
 
-// length of 'arr_question' object
-var arr_length = Object.keys(arr_question).length;
+// https://qiita.com/chiiia12/items/9efec29e6b360e3cd38a
+var httpObj = new XMLHttpRequest();
+httpObj.open("get", "suffix.json", true);
+ httpObj.onload = function(){
+                var myData = JSON.parse(this.responseText);
+                var txt = "";
+                for (var i=0; i<myData.length; i++){
+                   var option = document.createElement("option");
+                    option.innerText = myData[i].name;
+                    option.value=myData[i].value;
+                    document.getElementById("question").appendChild(option); 
+                }
 
-// keys of 'arr_question' object
-var arr_keys = Object.keys(arr_question);
+            }
+       httpObj.send(null);
 
-// values of 'arr_question' object
-var arr_values = Object.values(arr_question);
+// // length of 'arr_question' object
+// var arr_length = Object.keys(arr_question).length;
 
-// split values
-for (val_split in arr_values){
-  // arr_val_split is an Array for storing each values
-  var arr_val_split = arr_values[val_split].split(',');
-}
+// // keys of 'arr_question' object
+// var arr_keys = Object.keys(arr_question);
 
-// Start funtction(the flushcards will start when Shift + Enter are pressed)
-$(window).keydown(function startCards(e){
-  var question_key;
-       if(e.shiftKey && e.keyCode == 13) {
+// // values of 'arr_question' object
+// var arr_values = Object.values(arr_question);
 
-         // show prefix in quetion area
-         question_key = arr_keys[ (Math.floor( Math.random() * arr_keys.length ))-1 ] ;
-         $('#question').text(question_key);
-         // focus on answer box
-         $('#user_input').focus();
-         //return question value
-         console.log(question_key);
-       };
-});
-/* add function to count other cards left and also make same prefix won't appear more than once.*/
+// // split values
+// for (val_split in arr_values){
+//   // arr_val_split is an Array for storing each values
+//   var arr_val_split = arr_values[val_split].split(',');
+// }
+
+// // Start funtction(the flushcards will start when Shift + Enter are pressed)
+// $(window).keydown(function startCards(e){
+//   var question_key;
+//        if(e.shiftKey && e.keyCode == 13) {
+
+//          // show prefix in quetion area
+//          question_key = arr_keys[ (Math.floor( Math.random() * arr_keys.length ))-1 ] ;
+//          $('#question').text(question_key);
+//          // focus on answer box
+//          $('#user_input').focus();
+//          //return question value
+//          console.log(question_key);
+//        };
+// });
+// /* add function to count other cards left and also make same prefix won't appear more than once.*/
 
 
-// submit and compare the answer function
-function submit_answer(){
-    var user_input = document.getElementById('user_input').value;
-    var question_key = startCards();
-    if(question_key == true) {
-        console.log(2);
-    }else{
-      $('#answer').text("Please input your answer.");
-    }
-    return false;
-  };
+// // submit and compare the answer function
+// function submit_answer(){
+//     var user_input = document.getElementById('user_input').value;
+//     var question_key = startCards();
+//     if(question_key == true) {
+//         console.log(2);
+//     }else{
+//       $('#answer').text("Please input your answer.");
+//     }
+//     return false;
+//   };
 
-//$('#button_submit').on('click',submit_answer);
-// || $('#button_submit').click()//
-$(window).keydown(function(e){
-  if(e.ctrlKey && e.keyCode == 13) {
-    submit_answer();
-  }
+// //$('#button_submit').on('click',submit_answer);
+// // || $('#button_submit').click()//
+// $(window).keydown(function(e){
+//   if(e.ctrlKey && e.keyCode == 13) {
+//     submit_answer();
+//   }
 
-});
+// });
