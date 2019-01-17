@@ -1,3 +1,29 @@
+{
+  "suffix" : [
+    {
+      'id':1,
+      'suf':'a-',
+      'meaning':'not'
+    },
+    {
+      'id':2,
+      'suf':'acro-',
+      'meaning':'high'
+    },
+    {
+      'id':3,
+      'suf':'allo-',
+      'meaning':'other'
+    },
+    {
+      'id':4,
+      'suf':'contra-',
+      'meaning':'below','against'
+    }
+  ]
+}
+
+
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
 // $(document).ready(function(){
