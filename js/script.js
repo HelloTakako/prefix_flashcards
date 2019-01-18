@@ -1,19 +1,19 @@
 var prefix = {
     s1 : {
-      pref:'a-',
+      pref : 'a-',
       meaning:'not'
     },
     s2 : {
-      pref:'acro-',
-      meaning:'high'
+      pref : 'acro-',
+      meaning : 'high'
     },
     s3 : {
-      pref:'allo-',
-      meaning:'other'
+      pref : 'allo-',
+      meaning : 'other'
     },
     s4 : {
-      pref:'contra-',
-      meaning:['below','against']
+      pref : 'contra-',
+      meaning : ['below','against']
     }
   }
 
@@ -38,10 +38,14 @@ $(window).keydown(function startCards(e){
        return question_key;
 });
 
-if( question_key != undefined ){
-  console.log(11);
-} 
-
+function check(){
+if( question_key == undefined ){
+  console.log('2dcsdsv');
+} else {
+  console.log('question_key');
+}
+}
+check();
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
 // $(document).ready(function(){
