@@ -1,28 +1,46 @@
-var suffix = {
+var prefix = {
     s1 : {
-      suf:'a-',
+      pref:'a-',
       meaning:'not'
     },
     s2 : {
-      suf:'acro-',
+      pref:'acro-',
       meaning:'high'
     },
     s3 : {
-      suf:'allo-',
+      pref:'allo-',
       meaning:'other'
     },
     s4 : {
-      suf:'contra-',
+      pref:'contra-',
       meaning:['below','against']
     }
   }
 
-var arr_suf = [];
-for ( i in suffix){
-  arr_suf.push(i);
+// Get the length of prefix
+var arr_pref = [];
+for ( i in prefix ){
+  arr_pref.push(i);
 }
 
+// Start funtction(the flushcards will start when Shift + Enter are pressed)
+var question_key;
+$(window).keydown(function startCards(e){
+       if(e.shiftKey && e.keyCode == 13) {
 
+         // show prefix in quetion area
+         question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)].pref;
+         $('#question').text(question_key);
+         // focus on answer box
+         $('#user_input').focus();
+         //return question value         
+       };
+       return question_key;
+});
+
+if( question_key != undefined ){
+  console.log(11);
+} 
 
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
