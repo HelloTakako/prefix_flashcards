@@ -1,27 +1,21 @@
-{
-  "suffix" : [
-    {
-      'id':1,
-      'suf':'a-',
-      'meaning':'not'
+var suffix = {
+    s1 : { suf:'a-', meaning:'not'
     },
-    {
-      'id':2,
-      'suf':'acro-',
-      'meaning':'high'
+    s2 : {
+      suf:'acro-',
+      meaning:'high'
     },
-    {
-      'id':3,
-      'suf':'allo-',
-      'meaning':'other'
+    s3 : {
+      suf:'allo-',
+      meaning:'other'
     },
-    {
-      'id':4,
-      'suf':'contra-',
-      'meaning':'below','against'
+    s4 : {
+      suf:'contra-',
+      meaning:['below','against']
     }
-  ]
-}
+  }
+
+
 
 
 // read suffix.json
@@ -35,20 +29,20 @@
 // });
 
 // https://qiita.com/chiiia12/items/9efec29e6b360e3cd38a
-var httpObj = new XMLHttpRequest();
-httpObj.open("get", "suffix.json", true);
- httpObj.onload = function(){
-                var myData = JSON.parse(this.responseText);
-                var txt = "";
-                for (var i=0; i<myData.length; i++){
-                   var option = document.createElement("option");
-                    option.innerText = myData[i].name;
-                    option.value=myData[i].value;
-                    document.getElementById("question").appendChild(option); 
-                }
+// var httpObj = new XMLHttpRequest();
+// httpObj.open("get", "suffix.json", true);
+//  httpObj.onload = function(){
+//                 var myData = JSON.parse(this.responseText);
+//                 var txt = "";
+//                 for (var i=0; i<myData.length; i++){
+//                    var option = document.createElement("option");
+//                     option.innerText = myData[i].name;
+//                     option.value=myData[i].value;
+//                     document.getElementById("question").appendChild(option); 
+//                 }
 
-            }
-       httpObj.send(null);
+//             }
+//        httpObj.send(null);
 
 // // length of 'arr_question' object
 // var arr_length = Object.keys(arr_question).length;
