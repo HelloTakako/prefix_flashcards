@@ -1,5 +1,7 @@
 var suffix = {
-    s1 : { suf:'a-', meaning:'not'
+    s1 : {
+      suf:'a-',
+      meaning:'not'
     },
     s2 : {
       suf:'acro-',
@@ -15,6 +17,10 @@ var suffix = {
     }
   }
 
+var arr_suf = [];
+for ( i in suffix){
+  arr_suf.push(i);
+}
 
 
 
