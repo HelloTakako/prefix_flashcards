@@ -41,11 +41,10 @@ $(window).keydown(function startCards(e){
 function check(){
     if( question_key == undefined ){
         $(window).keydown(function startCards(e){
-
             if(e.ctrlKey && e.keyCode == 13){
                    $('#answer').innerHTML = 'Please hit \"Shift\" and \"Enter\"' ;
                }
-        }
+        })
 } else {
   console.log('question_key');
 }
