@@ -49,7 +49,13 @@ $(window).keydown(function startCards(e){
                 if ( typeof user_input.value == 'undefined' ){
                   document.getElementById("answer").innerText = 'Please enter your answer' ;
                 } else {
-                  console.log(user_input.value);
+                  if (user_input.value == question_key.meaning ){
+                    document.getElementById("answer").innerText = 'Correct! "Ctrl" and "Enter" to next card. ' ;
+
+                  } else {
+                    console.log("wrong");
+                  }
+                  
                 }
 
              }
