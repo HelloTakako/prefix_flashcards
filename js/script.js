@@ -29,8 +29,8 @@ $(window).keydown(function startCards(e){
        if(e.shiftKey && e.keyCode == 13) {
 
          // show prefix in quetion area
-         question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)].pref;
-         $('#question').text(question_key);
+         question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)];
+         $('#question').text(question_key.pref);
 
          // focus on answer box
          $('#user_input').focus();
@@ -45,7 +45,13 @@ $(window).keydown(function startCards(e){
               if( typeof question_key == "undefined" ){
                  document.getElementById("answer").innerText = 'Please hit \"Shift\" and \"Enter\".' ; 
              } else {
-                document.getElementById("answer").innerText = 'Yes' ; 
+              var user_input = document.getElementById('user_input');
+                if ( typeof user_input.value == 'undefined' ){
+                  document.getElementById("answer").innerText = 'Please enter your answer' ;
+                } else {
+                  console.log(user_input.value);
+                }
+
              }
       }
 })
