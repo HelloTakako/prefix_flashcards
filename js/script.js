@@ -31,25 +31,27 @@ $(window).keydown(function startCards(e){
          // show prefix in quetion area
          question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)].pref;
          $('#question').text(question_key);
+
          // focus on answer box
          $('#user_input').focus();
-         //return question value         
        };
+
+       //return question value         
        return question_key;
 });
 
-function check(){
-    if( question_key == undefined ){
-        $(window).keydown(function startCards(e){
-            if(e.ctrlKey && e.keyCode == 13){
-                   $('#answer').innerHTML = 'Please hit \"Shift\" and \"Enter\"' ;
-               }
-        })
+
+
+if ( question_key == undefined ){
+      $(window).keydown(function startCards(e){
+          if(e.ctrlKey && e.keyCode == 13){
+                 document.getElementById("answer").innerText = 'Please hit \"Shift\" and \"Enter\".' ; 
+             }
+      })
 } else {
-  console.log('question_key');
+
 }
-}
-check();
+
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
 // $(document).ready(function(){
