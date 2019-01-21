@@ -68,7 +68,6 @@ h1 {
   color: #ff5232; }
 
 input {
-  border: 1px solid #aaa;
   border-radius: 10px;
   padding: 10px 0;
   text-align: center; }
@@ -83,8 +82,6 @@ input {
   background-color: #999; }
 
 #answer {
-  border-left: 1px solid #aaa;
-  content: "";
   padding: 10px;
   min-height: 30px; }
 
