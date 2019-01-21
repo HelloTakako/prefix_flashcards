@@ -40,17 +40,16 @@ $(window).keydown(function startCards(e){
        return question_key;
 });
 
-
-
-if ( question_key == undefined ){
-      $(window).keydown(function startCards(e){
+$(window).keydown(function startCards(e){
           if(e.ctrlKey && e.keyCode == 13){
+              if( typeof question_key == "undefined" ){
                  document.getElementById("answer").innerText = 'Please hit \"Shift\" and \"Enter\".' ; 
+             } else {
+                document.getElementById("answer").innerText = 'Yes' ; 
              }
-      })
-} else {
+      }
+})
 
-}
 
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
