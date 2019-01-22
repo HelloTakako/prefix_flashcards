@@ -25,6 +25,7 @@ for ( i in prefix ){
 
 // Start function
 var question_key;
+
 function startCards(){
          // show prefix in quetion area
          question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)];
@@ -35,34 +36,38 @@ function startCards(){
 
          //return question value         
          return question_key;
-
-
        };
 
 
 // function to compare user's input and answer
 function checkAnswer(){
-        var user_input = document.getElementById('user_input');
-        var answer = document.getElementById("answer");
-          if ( typeof user_input.value == 'undefined' ){
-            answer.innerText = 'Please enter your answer.' ;
-          } else {
-            if (user_input.value == question_key.meaning ){
-              answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
-              answer.classList.add('answer_correct');
-              if(answer.classList.contains('answer_wrong')){
-                answer.classList.remove('answer_wrong');
-              }
+    var user_input = document.getElementById('user_input');
+    var answer = document.getElementById("answer");
+      if ( typeof user_input.value == 'undefined' ){
+        answer.innerText = 'Please enter your answer.' ;
+      } else {
+        if (user_input.value == question_key.meaning ){
+          answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
+          answer.classList.add('answer_correct');
+          if(answer.classList.contains('answer_wrong')){
+            answer.classList.remove('answer_wrong');
+          }
 
-            } else if(user_input.value != question_key.meaning || user_input.value != null ) {
-              answer.innerText = 'Your answer is wrong! Try again.' ;
-              answer.classList.add('answer_wrong');
-              if(answer.classList.contains('answer_correct')){
-                answer.classList.remove('answer_correct');
-              }
-            }            
-      }
+        } else if(user_input.value != question_key.meaning || user_input.value != null ) {
+          answer.innerText = 'Your answer is wrong! Try again.' ;
+          answer.classList.add('answer_wrong');
+          if(answer.classList.contains('answer_correct')){
+            answer.classList.remove('answer_correct');
+          }
+        }            
+    }
 }
+
+// show answer when "show_answer" button is clicked, or Shift + Enter are pressed 
+function showAnswer(){
+
+}
+
 
 // action when user submitted their answer     
 $(window).keydown(function startCards(e){
@@ -75,6 +80,15 @@ $(window).keydown(function startCards(e){
              }
       }
 })
+
+// show next card and clear values of user input and answer field
+         var user_input = document.getElementById('user_input');
+         var answer = document.getElementById("answer");
+
+          user_input.value = "";
+          answer.innerText = "";
+
+
 
 
 
