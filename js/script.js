@@ -23,45 +23,77 @@ for ( i in prefix ){
   arr_pref.push(i);
 }
 
-// Start funtction(the flushcards will start when Shift + Enter are pressed)
+// Start function
 var question_key;
-$(window).keydown(function startCards(e){
-       if(e.shiftKey && e.keyCode == 13) {
-
+function startCards(){
          // show prefix in quetion area
          question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)];
          $('#question').text(question_key.pref);
 
          // focus on answer box
          $('#user_input').focus();
+
+         //return question value         
+         return question_key;
+
+
        };
 
-       //return question value         
-       return question_key;
-});
 
+// function to compare user's input and answer
+function checkAnswer(){
+        var user_input = document.getElementById('user_input');
+        var answer = document.getElementById("answer");
+          if ( typeof user_input.value == 'undefined' ){
+            answer.innerText = 'Please enter your answer.' ;
+          } else {
+            if (user_input.value == question_key.meaning ){
+              answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
+              answer.classList.add('answer_correct');
+              if(answer.classList.contains('answer_wrong')){
+                answer.classList.remove('answer_wrong');
+              }
+
+            } else if(user_input.value != question_key.meaning || user_input.value != null ) {
+              answer.innerText = 'Your answer is wrong! Try again.' ;
+              answer.classList.add('answer_wrong');
+              if(answer.classList.contains('answer_correct')){
+                answer.classList.remove('answer_correct');
+              }
+            }            
+      }
+}
+
+// action when user submitted their answer     
 $(window).keydown(function startCards(e){
           if(e.ctrlKey && e.keyCode == 13){
+            var err_txt = 'Please hit \"Shift\" + \"Enter\".';
               if( typeof question_key == "undefined" ){
-                 document.getElementById("answer").innerText = 'Please hit \"Shift\" and \"Enter\".' ; 
+                 document.getElementById("answer").innerText = err_txt ; 
              } else {
-              var user_input = document.getElementById('user_input');
-                if ( typeof user_input.value == 'undefined' ){
-                  document.getElementById("answer").innerText = 'Please enter your answer' ;
-                } else {
-                  if (user_input.value == question_key.meaning ){
-                    document.getElementById("answer").innerText = 'Correct! "Ctrl" and "Enter" to next card. ' ;
-
-                  } else {
-                    console.log("wrong");
-                  }
-                  
-                }
-
+                checkAnswer();
              }
       }
 })
 
+
+
+// Start funtction(the flushcards will start when Shift + Enter are pressed)
+// var question_key;
+// $(window).keydown(function startCards(e){
+//        if(e.shiftKey && e.keyCode == 13) {
+
+//          // show prefix in quetion area
+//          question_key = prefix["s" + (Math.floor(Math.random() * arr_pref.length) + 1)];
+//          $('#question').text(question_key.pref);
+
+//          // focus on answer box
+//          $('#user_input').focus();
+//        };
+
+//        //return question value         
+//        return question_key;
+// });
 
 // read suffix.json
 // jQueryでjsonデータを扱ってみる【入門編】
