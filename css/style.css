@@ -85,4 +85,12 @@ input {
   padding: 10px;
   min-height: 30px; }
 
+.answer_correct, .answer_wrong {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #aad812; }
+
+.answer_wrong {
+  color: #d86212; }
+
 /*# sourceMappingURL=style.css.map */
