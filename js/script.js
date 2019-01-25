@@ -41,7 +41,7 @@ var prefix = {
     },
     p11 : {
       pref : 'contra-',
-      meaning : ['other','against']
+      meaning : ['below','against']
     },
     p12 : {
       pref : 'counter-',
@@ -119,13 +119,18 @@ for ( i in prefix ){
 var question_key;
 var next_card = "";
 
+
 // Start function
 function startCards(){
          // show prefix in quetion area
          question_key = prefix["p" + (Math.floor(Math.random() * arr_pref.length) + 1)];
          $('#question').text(question_key.pref);
 
-         // focus on answer box
+         // focus on answer box and clear its value if value exists
+         if ($('#user_input').value != null){
+         $('#user_input').value = "";
+         }
+         
          $('#user_input').focus();
 
          //return question value         
@@ -133,12 +138,11 @@ function startCards(){
        };
 
 
-
 // function to compare user's input and answer
 function checkAnswer(){
-    var user_input = document.getElementById('user_input');
-    var answer = document.getElementById("answer");
-      if ( typeof user_input.value == 'undefined' ){
+      var user_input = document.getElementById('user_input');
+      var answer = document.getElementById("answer");
+      if ( typeof user_input.value == null ){
         answer.innerText = 'Please enter your answer.' ;
       } else {
         if (user_input.value == question_key.meaning ){
@@ -146,23 +150,14 @@ function checkAnswer(){
           answer.classList.add('answer_correct');
 
             // Proceed to next card
-			$(window).keydown(function nextCard(e){
-				  if(answer.classList　== 'answer_correct'){
-			          if(e.ctrlKey && e.keyCode == 13){
-			  	        answer.innerText = "";
-			  	        answer.classList.remove('answer_correct');
-			  	        answer.classList.remove('answer_wrong');
-			          	startCards();
-			          	checkAnswer();
-				      }
-			      }
-			})
+    			
 
+          //remove class .answer_wrong
           if(answer.classList.contains('answer_wrong')){
             answer.classList.remove('answer_wrong');
           }
 
-        } else if(user_input.value != question_key.meaning || user_input.value != null ) {
+        } else if(user_input.value != question_key.meaning && user_input.value !== "") {
           answer.innerText = 'Your answer is wrong! Try again.' ;
           answer.classList.add('answer_wrong');
           if(answer.classList.contains('answer_correct')){
@@ -172,13 +167,33 @@ function checkAnswer(){
     }
 }
 
+$(window).keydown(function nextCard(e){
+              if(answer.classList　== 'answer_correct'){
+                    if(e.ctrlKey && e.keyCode == 13){
+                      
+                      answer.classList.remove('answer_correct');
+                      answer.classList.remove('answer_wrong');
+                      startCards();
+                      user_input.value = "";
+                      answer.innerText = "";
+                      checkAnswer();
+                  }
 
+                }
+          })
 
 // show answer when "show_answer" button is clicked, or Shift + Enter are pressed 
 function showAnswer(){
 	var answer = document.getElementById("answer");
 	answer.innerText = question_key.meaning;
+          if(answer.classList.contains('answer_correct')){
+            answer.classList.remove('answer_correct');
+          }
+          if(answer.classList.contains('answer_wrong')){
+            answer.classList.remove('answer_wrong');
+          }
 }
+
 $(window).keydown(function errorAnswer(e){
           if(e.shiftKey && e.keyCode == 13){
             showAnswer();
@@ -198,11 +213,4 @@ $(window).keydown(function errorAnswer(e){
       }
 })
 
-// show next card and clear values of user input / answer field
-         var user_input = document.getElementById('user_input');
-         var answer = document.getElementById("answer");
 
-	      user_input = "";
-	      answer = "";
-	      user_input.value = "";
-	      answer.innerText = "";
