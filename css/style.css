@@ -106,10 +106,10 @@ input {
 #button_show_answer {
   width:40%;
   float: right;
-  border: none;
   font-size: 1.6rem;
   padding: 10px;
   border-radius: 10px;
+  border: 1px solid #ddd;
   border-bottom: 3px solid rgba(0,0,0,.5);
   color: #666;
 }
