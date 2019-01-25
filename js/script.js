@@ -169,7 +169,8 @@ function checkAnswer(){
 
 $(window).keydown(function nextCard(e){
               if(answer.classList　== 'answer_correct'){
-                    if(e.ctrlKey && e.keyCode == 13){
+//                  var next_button_click = document.getElementById('button_submit');
+                    if(e.ctrlKey && e.keyCode == 13 ){
                       
                       answer.classList.remove('answer_correct');
                       answer.classList.remove('answer_wrong');
