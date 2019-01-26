@@ -96,15 +96,7 @@ var prefix = {
       meaning : 'not'
     },
     p25 : {
-      pref : 'il-',
-      meaning : ['within','toward','marginal or not']
-    },
-    p26 : {
-      pref : 'im-',
-      meaning : ['within','toward','marginal or not']
-    },
-    p27 : {
-      pref : 'in-',
+      pref : 'in-, im-, il-,',
       meaning : ['within','toward','marginal or not']
     }
   }
