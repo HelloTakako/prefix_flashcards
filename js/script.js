@@ -168,7 +168,7 @@ function checkAnswer(){
 
 
         } else if(user_input != question_key.meaning && user_input !== "") {
-          answer.innerText = 'Your answer is wrong! Try again.' ;
+          answer.innerText = 'Wrong! Try again.' ;
           answer.classList.add('answer_wrong');
           $('#user_input').focus();
           user_input = "";
