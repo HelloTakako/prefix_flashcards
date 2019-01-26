@@ -22,7 +22,7 @@ h1 {
   width: 100%;
 }
 @media screen and (max-width:640px){
-  h1.hide_h1{
+  h1.start_hide{
     display: none;    
   }
 }
@@ -44,7 +44,7 @@ h1 {
   padding: 10px;
   width:100px;
   font-weight: bold;
-  margin:15px auto 20px;
+  margin:15px auto;
   border-radius: 10px;
   display: block;
   border: 1px solid #ff5232;
