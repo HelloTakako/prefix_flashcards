@@ -139,8 +139,7 @@ function startCards(){
          
          $('#user_input').focus();
 
-         user_input.value = "";
-         answer.innerText = "";
+
 
          //return question value         
          return question_key;
@@ -151,12 +150,13 @@ function startCards(){
 function checkAnswer(){
       var user_input = document.getElementById('user_input');
       var answer = document.getElementById("answer");
-      if ( typeof user_input.value == null ){
-        answer.innerText = 'Please enter your answer.' ;
-      } else {
-        if (user_input.value == question_key.meaning ){
+      // if ( typeof user_input.value == null ){
+      //   answer.innerText = 'Please enter your answer.' ;
+      // } else {
+        if (user_input.value == question_key.meaning && user_input.value !== "" ){
           answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
           answer.classList.add('answer_correct');
+          console.log(123);
 
           //remove class .answer_wrong
           if(answer.classList.contains('answer_wrong')){
@@ -166,31 +166,37 @@ function checkAnswer(){
         } else if(user_input.value != question_key.meaning && user_input.value !== "") {
           answer.innerText = 'Your answer is wrong! Try again.' ;
           answer.classList.add('answer_wrong');
+          $('#user_input').focus();
+          user_input.value = "";
+
           if(answer.classList.contains('answer_correct')){
             answer.classList.remove('answer_correct');
           }
         }
-    }
+    // }
 }
 // end of function checkAnswer()
+$(window).keydown(function(e){
+  if(e.ctrlKey && e.keyCode == 13){
+    checkAnswer();
+    startCards();
 
-
-
-
-
-// proceed next card if the user's answer is correct
-$(window).keydown(function nextCard(e){
-  if(answer.classList　== 'answer_correct'){
-    if(e.ctrlKey && e.keyCode == 13){                      
-      answer.classList.remove('answer_correct');
-      answer.classList.remove('answer_wrong');
-      startCards();
-      user_input.value = "";
-      answer.innerText = "";
-      checkAnswer();
-    }
   }
 })
+
+
+//proceed next card if the user's answer is correct
+// $(window).keydown(function nextCard(e){
+//   if(answer.classList　== 'answer_correct'){
+//     if(e.ctrlKey && e.keyCode == 13){                      
+//       startCards();
+//       answer.classList.remove('answer_correct');
+//       answer.classList.remove('answer_wrong');
+//       user_input.value = "";
+//       answer.innerText = "";
+//     }
+//   }
+// })
 
 // show answer when "show_answer" button is clicked, or Shift + Enter are pressed 
 function showAnswer(){
@@ -202,6 +208,7 @@ function showAnswer(){
           if(answer.classList.contains('answer_wrong')){
             answer.classList.remove('answer_wrong');
           }
+          $('#user_input').focus();
 }
 
 $(window).keydown(function errorAnswer(e){
@@ -212,13 +219,13 @@ $(window).keydown(function errorAnswer(e){
 
 
 // action when user submitted their answer     
-$(window).keydown(function errorAnswer(e){
-          if((e.ctrlKey && e.keyCode == 13) && $('#question').value == "" ){
-            var err_txt = 'Please hit \"Start\" button.';
-              if( typeof question_key == "undefined" ){
-                 document.getElementById("answer").innerText = err_txt ; 
-             } else {
-                checkAnswer();
-             }
-      }
-})
+// $(window).keydown(function errorAnswer(e){
+//           if((e.ctrlKey && e.keyCode == 13) && $('#question').value == "" ){
+//             var err_txt = 'Please hit \"Start\" button.';
+//               if( typeof question_key == "undefined" ){
+//                  document.getElementById("answer").innerText = err_txt ; 
+//              } else {
+//                 checkAnswer();
+//              }
+//       }
+// })

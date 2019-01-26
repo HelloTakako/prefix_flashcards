@@ -21,11 +21,6 @@ h1 {
   padding: 10px 0;
   width: 100%;
 }
-@media screen and (max-width:640px){
-  h1.start_hide{
-    display: none;    
-  }
-}
 
 #category {
   display: block;
@@ -44,7 +39,7 @@ h1 {
   padding: 10px;
   width:100px;
   font-weight: bold;
-  margin:15px auto;
+  margin:15px auto 0;
   border-radius: 10px;
   display: block;
   border: 1px solid #ff5232;
@@ -56,7 +51,7 @@ h1 {
 #input_area {
   width: 80%;
   background-color: #fff;
-  margin: 1% auto;
+  margin: 15px auto;
   padding: 2%;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -76,12 +71,12 @@ h1 {
 
 #input_area > * {
   display: block;
-  width: 100%;
+  /*width: 100%;*/
   margin-bottom: 10px;
 }
 
 #question {
-  height: 50px;
+  height: 40px;
   text-align: center;
   font-weight: bold;
   font-size: 3rem;
@@ -95,6 +90,7 @@ input {
   height:40px;
   border: 1px solid #aaa;
   font-size: 1.8rem;
+  width: 100%;
 }
 
 #button_submit {
@@ -138,6 +134,12 @@ input {
 
 .button{
   display:block;
+}
+
+@media screen and (max-width:640px){
+  .start_hide{
+    display: none !important;    
+  }
 }
 
 .clearfix:after{

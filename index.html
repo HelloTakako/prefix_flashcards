@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Prefix flashcards</title>
-  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">  
   <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <!-- https://en.wikipedia.org/wiki/Prefix -->
@@ -44,16 +44,18 @@ window.onload = function(){
       if(answer.classList　== 'answer_correct'){
           
          //remove classes
-         answer.classList.remove('answer_correct');
-         answer.classList.remove('answer_wrong');
+         // answer.classList.remove('answer_correct');
+         // answer.classList.remove('answer_wrong');
          startCards();
-         user_input.value = "";
-         answer.innerText = "";
-         checkAnswer();         
+         // user_input.value = "";
+         // answer.innerText = "";
+         // checkAnswer();         
          
       }
 })
 }
+
+
 
   </script>
 </body>
