@@ -151,12 +151,13 @@ function startCards(){
 
 // function to compare user's input and answer
 function checkAnswer(){
-      var user_input = document.getElementById('user_input');
+      var user_input_raw = document.getElementById('user_input').value;
+      var user_input = user_input_raw.toLowerCase();
       var answer = document.getElementById("answer");
       // if ( typeof user_input.value == null ){
       //   answer.innerText = 'Please enter your answer.' ;
       // } else {
-        if (user_input.value == question_key.meaning && user_input.value !== "" ){
+        if (user_input == question_key.meaning){
           answer.innerHTML = 'Correct!';
           answer.classList.add('answer_correct');
 
@@ -165,11 +166,12 @@ function checkAnswer(){
             answer.classList.remove('answer_wrong');
           }
 
-        } else if(user_input.value != question_key.meaning && user_input.value !== "") {
+
+        } else if(user_input != question_key.meaning && user_input !== "") {
           answer.innerText = 'Your answer is wrong! Try again.' ;
           answer.classList.add('answer_wrong');
           $('#user_input').focus();
-          user_input.value = "";
+          user_input = "";
 
           if(answer.classList.contains('answer_correct')){
             answer.classList.remove('answer_correct');
@@ -191,7 +193,7 @@ $(window).keydown(function nextCard(e){
   if(answer.classList　== 'answer_correct'){
     if(e.ctrlKey && e.keyCode == 13){                      
       startCards();
-      // user_input.value = "";
+      user_input = "";
       // answer.innerText = "";
     }
   }

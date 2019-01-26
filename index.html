@@ -41,13 +41,12 @@ window.onload = function(){
   button_submit.addEventListener('click', function(){
       var answer = document.getElementById("answer");
 
-      if(answer.classList　== 'answer_correct'){
-          
+      if(answer.classList　== 'answer_correct'){          
          //remove classes
          // answer.classList.remove('answer_correct');
          // answer.classList.remove('answer_wrong');
          startCards();
-         user_input.value = "";
+         user_input = "";
          // answer.innerText = "";
          // checkAnswer();         
          
