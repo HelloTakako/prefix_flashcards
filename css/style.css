@@ -21,7 +21,7 @@ h1 {
   padding: 10px 0;
   width: 100%;
 }
-@media screen and (max-width:490px){
+@media screen and (max-width:640px){
   h1.hide_h1{
     display: none;    
   }
@@ -94,7 +94,7 @@ input {
   text-align: center;
   height:40px;
   border: 1px solid #aaa;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 #button_submit {
@@ -123,7 +123,7 @@ input {
 #answer {
   padding: 10px;
   min-height: 30px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .answer_correct, .answer_wrong {
