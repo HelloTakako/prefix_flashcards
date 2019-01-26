@@ -213,7 +213,7 @@ $(window).keydown(function errorAnswer(e){
 
 // action when user submitted their answer     
 $(window).keydown(function errorAnswer(e){
-          if(e.ctrlKey && e.keyCode == 13){
+          if((e.ctrlKey && e.keyCode == 13) && $('#question').value == "" ){
             var err_txt = 'Please hit \"Start\" button.';
               if( typeof question_key == "undefined" ){
                  document.getElementById("answer").innerText = err_txt ; 
