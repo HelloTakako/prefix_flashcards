@@ -192,8 +192,9 @@ $(window).keydown(function(e){
 $(window).keydown(function nextCard(e){
   if(answer.classList　== 'answer_correct'){
     if(e.ctrlKey && e.keyCode == 13){                      
+      user_input.value = "";
       startCards();
-      user_input = "";
+      
       // answer.innerText = "";
     }
   }
