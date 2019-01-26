@@ -109,6 +109,7 @@ var prefix = {
     }
   }
 
+
 // Get the length of prefix
 var arr_pref = [];
 for ( i in prefix ){
@@ -120,8 +121,12 @@ var question_key;
 var next_card = "";
 
 
+
 // Start function
 function startCards(){
+  var answer = document.getElementById("answer");
+         // hide h1 for mobile
+         $('h1').addClass('hide_h1');
          // show prefix in quetion area
          question_key = prefix["p" + (Math.floor(Math.random() * arr_pref.length) + 1)];
          $('#question').text(question_key.pref);
@@ -133,10 +138,13 @@ function startCards(){
          
          $('#user_input').focus();
 
+         user_input.value = "";
+         answer.innerText = "";
+
          //return question value         
          return question_key;
        };
-
+// end of function startCards()
 
 // function to compare user's input and answer
 function checkAnswer(){
@@ -148,9 +156,6 @@ function checkAnswer(){
         if (user_input.value == question_key.meaning ){
           answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
           answer.classList.add('answer_correct');
-
-            // Proceed to next card
-    			
 
           //remove class .answer_wrong
           if(answer.classList.contains('answer_wrong')){
@@ -166,22 +171,25 @@ function checkAnswer(){
         }
     }
 }
+// end of function checkAnswer()
 
+
+
+
+
+// proceed next card if the user's answer is correct
 $(window).keydown(function nextCard(e){
-              if(answer.classList　== 'answer_correct'){
-//                  var next_button_click = document.getElementById('button_submit');
-                    if(e.ctrlKey && e.keyCode == 13 ){
-                      
-                      answer.classList.remove('answer_correct');
-                      answer.classList.remove('answer_wrong');
-                      startCards();
-                      user_input.value = "";
-                      answer.innerText = "";
-                      checkAnswer();
-                  }
-
-                }
-          })
+  if(answer.classList　== 'answer_correct'){
+    if(e.ctrlKey && e.keyCode == 13){                      
+      answer.classList.remove('answer_correct');
+      answer.classList.remove('answer_wrong');
+      startCards();
+      user_input.value = "";
+      answer.innerText = "";
+      checkAnswer();
+    }
+  }
+})
 
 // show answer when "show_answer" button is clicked, or Shift + Enter are pressed 
 function showAnswer(){
@@ -213,5 +221,3 @@ $(window).keydown(function errorAnswer(e){
              }
       }
 })
-
-
