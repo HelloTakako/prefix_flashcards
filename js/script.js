@@ -11,102 +11,102 @@ var prefix = {
       pref : 'allo-',
       meaning : 'other'
     },
-    p4 : {
-      pref : 'alter-',
-      meaning : 'at least secondary'
-    },
-    p5 : {
-      pref : 'an-',
-      meaning : 'additional'
-    },
-    p6 : {
-      pref : 'ante-',
-      meaning : 'prior'
-    },
-    p7 : {
-      pref : 'anti-',
-      meaning : 'opposite'
-    },
-    p8 : {
-      pref : 'auto-',
-      meaning : 'by oneself or itself'
-    },
-    p9 : {
-      pref : 'bi-',
-      meaning : 'two'
-    },
-    p10 : {
-      pref : 'co-',
-      meaning : 'together'
-    },
-    p11 : {
-      pref : 'contra-',
-      meaning : ['below','against']
-    },
-    p12 : {
-      pref : 'counter-',
-      meaning : 'against'
-    },
-    p13 : {
-      pref : 'de-',
-      meaning : ['negative','remove']
-    },
-    p14 : {
-      pref : 'di-',
-      meaning : 'two'
-    },
-    p15 : {
-      pref : 'dis-',
-      meaning : ['negative','remove']
-    },
-    p16 : {
-      pref : 'down-',
-      meaning : ['down','reduce']
-    },
-    p17 : {
-      pref : 'dys-',
-      meaning : ['negative','badly','wrongly']
-    },
-    p18 : {
-      pref : 'epi-',
-      meaning : ['upon addition','above']
-    },
-    p19 : {
-      pref : 'extra-',
-      meaning : ['to a greater extent','beyond']
-    },
-    p20 : {
-      pref : 'fore-',
-      meaning : 'before'
-    },
-    p21 : {
-      pref : 'hemi-',
-      meaning : 'half'
-    },
-    p22 : {
-      pref : 'hexa-',
-      meaning : 'six'
-    },
-    p23 : {
-      pref : 'hyper-',
-      meaning : 'beyond'
-    },
-    p24 : {
-      pref : 'ig-',
-      meaning : 'not'
-    },
-    p25 : {
-      pref : 'il-',
-      meaning : ['within','toward','marginal or not']
-    },
-    p26 : {
-      pref : 'im-',
-      meaning : ['within','toward','marginal or not']
-    },
-    p27 : {
-      pref : 'in-',
-      meaning : ['within','toward','marginal or not']
-    }
+    // p4 : {
+    //   pref : 'alter-',
+    //   meaning : 'at least secondary'
+    // },
+    // p5 : {
+    //   pref : 'an-',
+    //   meaning : 'additional'
+    // },
+    // p6 : {
+    //   pref : 'ante-',
+    //   meaning : 'prior'
+    // },
+    // p7 : {
+    //   pref : 'anti-',
+    //   meaning : 'opposite'
+    // },
+    // p8 : {
+    //   pref : 'auto-',
+    //   meaning : 'by oneself or itself'
+    // },
+    // p9 : {
+    //   pref : 'bi-',
+    //   meaning : 'two'
+    // },
+    // p10 : {
+    //   pref : 'co-',
+    //   meaning : 'together'
+    // },
+    // p11 : {
+    //   pref : 'contra-',
+    //   meaning : ['below','against']
+    // },
+    // p12 : {
+    //   pref : 'counter-',
+    //   meaning : 'against'
+    // },
+    // p13 : {
+    //   pref : 'de-',
+    //   meaning : ['negative','remove']
+    // },
+    // p14 : {
+    //   pref : 'di-',
+    //   meaning : 'two'
+    // },
+    // p15 : {
+    //   pref : 'dis-',
+    //   meaning : ['negative','remove']
+    // },
+    // p16 : {
+    //   pref : 'down-',
+    //   meaning : ['down','reduce']
+    // },
+    // p17 : {
+    //   pref : 'dys-',
+    //   meaning : ['negative','badly','wrongly']
+    // },
+    // p18 : {
+    //   pref : 'epi-',
+    //   meaning : ['upon addition','above']
+    // },
+    // p19 : {
+    //   pref : 'extra-',
+    //   meaning : ['to a greater extent','beyond']
+    // },
+    // p20 : {
+    //   pref : 'fore-',
+    //   meaning : 'before'
+    // },
+    // p21 : {
+    //   pref : 'hemi-',
+    //   meaning : 'half'
+    // },
+    // p22 : {
+    //   pref : 'hexa-',
+    //   meaning : 'six'
+    // },
+    // p23 : {
+    //   pref : 'hyper-',
+    //   meaning : 'beyond'
+    // },
+    // p24 : {
+    //   pref : 'ig-',
+    //   meaning : 'not'
+    // },
+    // p25 : {
+    //   pref : 'il-',
+    //   meaning : ['within','toward','marginal or not']
+    // },
+    // p26 : {
+    //   pref : 'im-',
+    //   meaning : ['within','toward','marginal or not']
+    // },
+    // p27 : {
+    //   pref : 'in-',
+    //   meaning : ['within','toward','marginal or not']
+    // }
   }
 
 
