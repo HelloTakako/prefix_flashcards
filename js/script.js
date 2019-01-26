@@ -146,9 +146,6 @@ function startCards(){
        };
 // end of function startCards()
 
-// delete values when proceeding next card
-
-
 // function to compare user's input and answer
 function checkAnswer(){
       var user_input_raw = document.getElementById('user_input').value;
