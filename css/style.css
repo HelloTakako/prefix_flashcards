@@ -21,7 +21,7 @@ h1 {
   padding: 10px 0;
   width: 100%;
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:490px){
   h1.hide_h1{
     display: none;    
   }
@@ -92,7 +92,7 @@ input {
   border-radius: 10px;
   padding: 10px 0;
   text-align: center;
-  height:50px;
+  height:40px;
   border: 1px solid #aaa;
 }
 
@@ -134,9 +134,11 @@ input {
 .answer_wrong {
   color: #d86212;
 }
+
 .button{
   display:block;
 }
+
 .clearfix:after{
   display: block;
   content: "";
