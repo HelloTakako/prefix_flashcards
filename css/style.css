@@ -94,6 +94,7 @@ input {
   text-align: center;
   height:40px;
   border: 1px solid #aaa;
+  font-size: 1.4rem;
 }
 
 #button_submit {
