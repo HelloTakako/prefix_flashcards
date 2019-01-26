@@ -11,102 +11,102 @@ var prefix = {
       pref : 'allo-',
       meaning : 'other'
     },
-    // p4 : {
-    //   pref : 'alter-',
-    //   meaning : 'at least secondary'
-    // },
-    // p5 : {
-    //   pref : 'an-',
-    //   meaning : 'additional'
-    // },
-    // p6 : {
-    //   pref : 'ante-',
-    //   meaning : 'prior'
-    // },
-    // p7 : {
-    //   pref : 'anti-',
-    //   meaning : 'opposite'
-    // },
-    // p8 : {
-    //   pref : 'auto-',
-    //   meaning : 'by oneself or itself'
-    // },
-    // p9 : {
-    //   pref : 'bi-',
-    //   meaning : 'two'
-    // },
-    // p10 : {
-    //   pref : 'co-',
-    //   meaning : 'together'
-    // },
-    // p11 : {
-    //   pref : 'contra-',
-    //   meaning : ['below','against']
-    // },
-    // p12 : {
-    //   pref : 'counter-',
-    //   meaning : 'against'
-    // },
-    // p13 : {
-    //   pref : 'de-',
-    //   meaning : ['negative','remove']
-    // },
-    // p14 : {
-    //   pref : 'di-',
-    //   meaning : 'two'
-    // },
-    // p15 : {
-    //   pref : 'dis-',
-    //   meaning : ['negative','remove']
-    // },
-    // p16 : {
-    //   pref : 'down-',
-    //   meaning : ['down','reduce']
-    // },
-    // p17 : {
-    //   pref : 'dys-',
-    //   meaning : ['negative','badly','wrongly']
-    // },
-    // p18 : {
-    //   pref : 'epi-',
-    //   meaning : ['upon addition','above']
-    // },
-    // p19 : {
-    //   pref : 'extra-',
-    //   meaning : ['to a greater extent','beyond']
-    // },
-    // p20 : {
-    //   pref : 'fore-',
-    //   meaning : 'before'
-    // },
-    // p21 : {
-    //   pref : 'hemi-',
-    //   meaning : 'half'
-    // },
-    // p22 : {
-    //   pref : 'hexa-',
-    //   meaning : 'six'
-    // },
-    // p23 : {
-    //   pref : 'hyper-',
-    //   meaning : 'beyond'
-    // },
-    // p24 : {
-    //   pref : 'ig-',
-    //   meaning : 'not'
-    // },
-    // p25 : {
-    //   pref : 'il-',
-    //   meaning : ['within','toward','marginal or not']
-    // },
-    // p26 : {
-    //   pref : 'im-',
-    //   meaning : ['within','toward','marginal or not']
-    // },
-    // p27 : {
-    //   pref : 'in-',
-    //   meaning : ['within','toward','marginal or not']
-    // }
+    p4 : {
+      pref : 'alter-',
+      meaning : 'at least secondary'
+    },
+    p5 : {
+      pref : 'an-',
+      meaning : 'additional'
+    },
+    p6 : {
+      pref : 'ante-',
+      meaning : 'prior'
+    },
+    p7 : {
+      pref : 'anti-',
+      meaning : 'opposite'
+    },
+    p8 : {
+      pref : 'auto-',
+      meaning : 'by oneself or itself'
+    },
+    p9 : {
+      pref : 'bi-',
+      meaning : 'two'
+    },
+    p10 : {
+      pref : 'co-',
+      meaning : 'together'
+    },
+    p11 : {
+      pref : 'contra-',
+      meaning : ['below','against']
+    },
+    p12 : {
+      pref : 'counter-',
+      meaning : 'against'
+    },
+    p13 : {
+      pref : 'de-',
+      meaning : ['negative','remove']
+    },
+    p14 : {
+      pref : 'di-',
+      meaning : 'two'
+    },
+    p15 : {
+      pref : 'dis-',
+      meaning : ['negative','remove']
+    },
+    p16 : {
+      pref : 'down-',
+      meaning : ['down','reduce']
+    },
+    p17 : {
+      pref : 'dys-',
+      meaning : ['negative','badly','wrongly']
+    },
+    p18 : {
+      pref : 'epi-',
+      meaning : ['upon addition','above']
+    },
+    p19 : {
+      pref : 'extra-',
+      meaning : ['to a greater extent','beyond']
+    },
+    p20 : {
+      pref : 'fore-',
+      meaning : 'before'
+    },
+    p21 : {
+      pref : 'hemi-',
+      meaning : 'half'
+    },
+    p22 : {
+      pref : 'hexa-',
+      meaning : 'six'
+    },
+    p23 : {
+      pref : 'hyper-',
+      meaning : 'beyond'
+    },
+    p24 : {
+      pref : 'ig-',
+      meaning : 'not'
+    },
+    p25 : {
+      pref : 'il-',
+      meaning : ['within','toward','marginal or not']
+    },
+    p26 : {
+      pref : 'im-',
+      meaning : ['within','toward','marginal or not']
+    },
+    p27 : {
+      pref : 'in-',
+      meaning : ['within','toward','marginal or not']
+    }
   }
 
 
@@ -146,6 +146,9 @@ function startCards(){
        };
 // end of function startCards()
 
+// delete values when proceeding next card
+
+
 // function to compare user's input and answer
 function checkAnswer(){
       var user_input = document.getElementById('user_input');
@@ -154,9 +157,8 @@ function checkAnswer(){
       //   answer.innerText = 'Please enter your answer.' ;
       // } else {
         if (user_input.value == question_key.meaning && user_input.value !== "" ){
-          answer.innerHTML = 'Correct! "Ctrl" + "Enter" to next card.' ;
+          answer.innerHTML = 'Correct!';
           answer.classList.add('answer_correct');
-          console.log(123);
 
           //remove class .answer_wrong
           if(answer.classList.contains('answer_wrong')){
@@ -176,27 +178,24 @@ function checkAnswer(){
     // }
 }
 // end of function checkAnswer()
+
 $(window).keydown(function(e){
   if(e.ctrlKey && e.keyCode == 13){
     checkAnswer();
-    startCards();
-
   }
 })
 
 
 //proceed next card if the user's answer is correct
-// $(window).keydown(function nextCard(e){
-//   if(answer.classList　== 'answer_correct'){
-//     if(e.ctrlKey && e.keyCode == 13){                      
-//       startCards();
-//       answer.classList.remove('answer_correct');
-//       answer.classList.remove('answer_wrong');
-//       user_input.value = "";
-//       answer.innerText = "";
-//     }
-//   }
-// })
+$(window).keydown(function nextCard(e){
+  if(answer.classList　== 'answer_correct'){
+    if(e.ctrlKey && e.keyCode == 13){                      
+      startCards();
+      // user_input.value = "";
+      // answer.innerText = "";
+    }
+  }
+})
 
 // show answer when "show_answer" button is clicked, or Shift + Enter are pressed 
 function showAnswer(){
