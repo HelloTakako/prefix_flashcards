@@ -125,8 +125,9 @@ var next_card = "";
 // Start function
 function startCards(){
   var answer = document.getElementById("answer");
-         // hide h1 for mobile
-         $('h1').addClass('hide_h1');
+         // hide h1 and start button for mobile
+         $('h1').addClass('start_hide');
+         $('#button_start').addClass('start_hide');
          // show prefix in quetion area
          question_key = prefix["p" + (Math.floor(Math.random() * arr_pref.length) + 1)];
          $('#question').text(question_key.pref);
