@@ -52,7 +52,7 @@ h1 {
   width: 80%;
   background-color: #fff;
   margin: 15px auto;
-  padding: 2%;
+  padding: 2% 5%;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -71,7 +71,6 @@ h1 {
 
 #input_area > * {
   display: block;
-  /*width: 100%;*/
   margin-bottom: 10px;
 }
 
@@ -95,24 +94,24 @@ input {
 
 #button_submit {
   width:40%;
-  float: left;
+  float: right;
   border: none;
   font-size: 1.6rem;
   padding: 10px;
   border-radius: 10px;
-  border-bottom: 3px solid rgba(0,0,0,.5);
+  /*border-bottom: 5px solid rgba(0,0,0,.5);*/
   color: #fff;
   background-color: #a26533;
 }
 
 #button_show_answer {
   width:40%;
-  float: right;
+  float: left;
   font-size: 1.6rem;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  border-bottom: 3px solid rgba(0,0,0,.5);
+  /*border-bottom: 5px solid rgba(0,0,0,.5);*/
   color: #666;
 }
 
@@ -140,6 +139,9 @@ input {
   .start_hide{
     display: none !important;    
   }
+  .sp_none{
+  display:none;
+}
 }
 
 .clearfix:after{
