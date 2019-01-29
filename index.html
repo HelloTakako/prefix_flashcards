@@ -23,7 +23,8 @@
   -->
   <div id="input_area">
     <div id="question"></div>
-    <input type="text" id="user_input" placeholder="Enter your answer here."></input>
+    <div id="user_input_area" class="flex_parent clearfix">
+    </div>
     <div class="button clearfix">
     <button id="button_show_answer" onclick="showAnswer()">Show Answer<span class="sp_none"><br>(Shift+Enter)</span></button>
     <button id="button_submit" onclick="checkAnswer()">Submit Answer<span class="sp_none"><br>(Ctrl+Enter)</span></button>
@@ -36,24 +37,25 @@
     var submitButtonClicked;
     var answer = document.getElementById('answer');
 
-window.onload = function(){
-  var button_submit = document.getElementById('button_submit');
-  button_submit.addEventListener('click', function(){
-      var answer = document.getElementById("answer");
+    window.onload = function(){
+      var button_submit = document.getElementById('button_submit');
+      button_submit.addEventListener('click', function(){
+          var answer = document.getElementById("answer");
+          var user_input_class = document.querySelectorAll('.user_input');
 
-      if(answer.classList　== 'answer_correct'){          
-         //remove classes
-         // answer.classList.remove('answer_correct');
-         // answer.classList.remove('answer_wrong');
-         user_input.value = "";
-         startCards();
-         
-         // answer.innerText = "";
-         // checkAnswer();         
-         
-      }
-})
-}
+          if(answer.classList　== 'answer_correct'){
+          // var i = 0;         
+          //   while ( i < user_input_class.length){
+          //     user_input_class[i].value = "";
+          //     i++;    
+          //   }
+            user_input_area.textContent = null;
+
+          startCards();             
+             
+          }
+      })
+    }
 
 
 
