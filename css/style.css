@@ -75,7 +75,7 @@ h1 {
 }
 
 #question {
-  height: 40px;
+  /*height: 40px;*/
   text-align: center;
   font-weight: bold;
   font-size: 3rem;
@@ -86,11 +86,29 @@ input {
   border-radius: 10px;
   padding: 10px 0;
   text-align: center;
-  height:40px;
+  height:25px;
   border: 1px solid #aaa;
   font-size: 1.8rem;
   width: 100%;
 }
+/*-- multi inputs --*/
+.flex_parent{
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	justify-content:space-evenly;
+  /*width:100%;*/
+  flex-wrap: wrap;
+}
+.input_multi{
+	width:48%;
+	margin-bottom:2%;
+  float:left;
+}
+.input_multi:nth-child(2n-1){
+  margin-right:2.5%;
+}
+/*----*/
 
 #button_submit {
   width:40%;
@@ -99,7 +117,7 @@ input {
   font-size: 1.6rem;
   padding: 10px;
   border-radius: 10px;
-  /*border-bottom: 5px solid rgba(0,0,0,.5);*/
+  border-bottom: 3px solid rgba(0,0,0,.3);
   color: #fff;
   background-color: #a26533;
 }
@@ -111,7 +129,7 @@ input {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  /*border-bottom: 5px solid rgba(0,0,0,.5);*/
+  border-bottom: 3px solid rgba(0,0,0,.3);
   color: #666;
 }
 
@@ -148,4 +166,8 @@ input {
   display: block;
   content: "";
   clear: both;
+}
+
+.pre_small{
+  font-size:70%;
 }
