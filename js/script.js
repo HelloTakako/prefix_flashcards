@@ -313,7 +313,7 @@ function startCards(){
   
          // hide h1 and start button for mobile
          $('h1').addClass('start_hide');
-         $('#button_start').addClass('start_hide');
+         $('#button_start').addClass('start_hide_button');
          
          // show prefix in quetion area
          question_key = prefix["p" + (Math.floor(Math.random() * arr_pref.length) + 1)];
