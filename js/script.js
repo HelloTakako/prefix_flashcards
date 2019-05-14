@@ -1,4 +1,6 @@
-//https://en.wikipedia.org/wiki/Prefix
+// prefix...https://en.wikipedia.org/wiki/Prefix
+// phrasal verbs...https://www.englishclub.com/vocabulary/phrasal-verbs-list.htm
+
 var prefix = {
     p1 : {
       pref : 'a-',

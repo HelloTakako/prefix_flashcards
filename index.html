@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Prefix flashcards</title>
+  <link rel="manifest" href="./manifest.json">
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">  
-  <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script src="./js/jquery-3.3.1.min.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
   <!-- https://en.wikipedia.org/wiki/Prefix -->
 
   <h1>Prefix <!--+ Suffix + Root -->Flashcards</h1>
   <button id="button_start" onclick="startCards()">Start</button>
-  <!--<select id="category" name="category">
+  <select id="category" name="category">
     <option value="prefix">Prefix</option>
-    <option value="suffix">Suffix</option>
-    <option value="root">Root</option>
+    <!-- <option value="suffix">Suffix</option>
+    <option value="root">Root</option> -->
+    <option value="ph-v">Phrasal Verbs</option>
   </select>
-  -->
+ 
   <div id="input_area">
     <div id="question"></div>
     <div id="user_input_area" class="flex_parent clearfix">

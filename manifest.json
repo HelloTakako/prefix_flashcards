@@ -1,0 +1,15 @@
+{
+  "short_name": "ESL App",
+  "name": "ESL App",
+  "icons": [
+    {
+      "src": "images/dummy.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#e2e2e2",
+  "theme_color": "#ff5232",
+  "display": "standalone"
+}
