@@ -6,6 +6,11 @@
       "src": "images/dummy.png",
       "type": "image/png",
       "sizes": "48x48"
+    },
+    {
+      "src": "images/dummy2.png",
+      "type": "image/png",
+      "sizes": "144x144"
     }
   ],
   "start_url": "index.html?launcher=true",
