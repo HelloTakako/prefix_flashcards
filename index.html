@@ -32,6 +32,7 @@
     <option value="ph-v">Phrasal Verbs</option>
   </select>
  
+ <div id="prefix">
   <div id="input_area">
     <div id="question"></div>
     <div id="user_input_area" class="flex_parent clearfix">
@@ -42,8 +43,14 @@
 	</div>
     <div id="answer"></div>
   </div>
+</div>
 
+<div id="ph-v">
+  <div id="ph-v-txt">ph v test</div>
+  <div id="ph-v-btns"></div>
+</div>
 
+<!--  -->
   <script type="text/javascript">
     var submitButtonClicked;
     var answer = document.getElementById('answer');
@@ -69,15 +76,20 @@
     }
 
   // CODELAB: Register service worker.
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg);
-          });
-    });
-  }
+  // if ('serviceWorker' in navigator) {
+  //   window.addEventListener('load', () => {
+  //     navigator.serviceWorker.register('/service-worker.js')
+  //         .then((reg) => {
+  //           console.log('Service worker registered.', reg);
+  //         });
+  //   });
+  // }
 
+// for detecting categories
+const cat = document.getElementById("category");
+if (cat.value == "ph-v"){
+  alert(cat.value);
+}
 
   </script>
 </body>
