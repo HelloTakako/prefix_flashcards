@@ -2,21 +2,9 @@
 // phrasal verbs...https://www.englishclub.com/vocabulary/phrasal-verbs-list.htm
 // how to use json in JS
 // https://qiita.com/1mada/items/9a48f7053a6016b5fd5a
+//https://stackoverflow.com/questions/16288388/how-to-use-a-javascript-to-load-and-parse-a-static-json-file-in-the-server
 
 
-$.ajax({ // start loading json
-  type: 'GET',
-  url: './js/data.json',
-  dataType: 'json'
-})
-.then(
-  function(json) { // when the loading of json successed
-    console.log('success');
-  },
-  function() { // when the loading of json failed
-    console.log('fail');
-  }
-);
 
 
 // Get the length of prefix
